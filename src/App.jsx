@@ -21,7 +21,7 @@ function App() {
                 <Route path='/profile/:userId' element={<Profile />}/>
             </Routes>
             
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

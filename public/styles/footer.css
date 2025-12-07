@@ -2,8 +2,8 @@
     background-color:  #f3eeee;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: auto;
 }
