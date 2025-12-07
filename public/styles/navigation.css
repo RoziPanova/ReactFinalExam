@@ -1,0 +1,37 @@
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3eeee;
+    padding: 7px 20px;
+    overflow: hidden;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.logo img
+{
+    height: 75px;
+    width: 175px;
+    justify-content: left;
+}
+.user-icon a{
+    margin-left: auto;
+    justify-content: right;
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}   
