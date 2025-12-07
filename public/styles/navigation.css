@@ -1,4 +1,6 @@
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -15,23 +17,31 @@ html, body, #root {
     padding: 7px 20px;
     overflow: hidden;
 }
+
 .nav-links {
     display: flex;
     align-items: center;
 }
-.logo img
-{
+
+.logo {
     height: 75px;
     width: 175px;
     justify-content: left;
 }
-.user-icon a{
+
+.heart {
+    height: 40px;
+    width: 40px;
+}
+
+.user-icon a {
     margin-left: auto;
     justify-content: right;
 }
+
 .navbar a {
-    margin: 0 15px;
+    margin: 0 15px 0 0;
     text-decoration: none;
     color: #333;
     font-weight: bold;
-}   
+}

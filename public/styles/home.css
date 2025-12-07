@@ -1,0 +1,56 @@
+.masonry {
+    column-count: 1;
+    column-gap: 1rem;
+    width: 100%;
+    max-width: 95%;
+    margin: 10px auto;
+    padding: 1rem;
+    box-sizing: border-box;
+
+}
+
+/* Responsive column counts */
+@media (min-width: 600px) {
+    .masonry {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 900px) {
+    .masonry {
+        column-count: 4;
+    }
+}
+
+@media (min-width: 1400px) {
+    .masonry {
+        column-count: 5;
+    }
+}
+
+/* Each card must avoid breaking across columns */
+.card {
+    display: inline-block;
+    /* important for columns */
+    width: 100%;
+    /* fills column width */
+    margin: 0 0 1rem;
+    /* vertical gap between items */
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Image styles */
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* natural aspect ratio preserved */
+    object-fit: cover;
+    /* if you use fixed height, keep cover */
+}
