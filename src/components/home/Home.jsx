@@ -1,9 +1,11 @@
+import { Link } from 'react-router';
 export default function Home() {
+    const postId = "samplePostId"; 
     return (
         <div>
             <div className="masonry">
                 <article className="card">
-                    <img src="pictures/pexels-mikhaelmayim-30253591.jpg" alt="" />
+                    <Link to={`/details/${postId}`}><img src="pictures/pexels-mikhaelmayim-30253591.jpg" alt="" /></Link>
                 </article>
                 <article className="card"><img src="pictures/pexels-shojol-30890859.jpg" alt="" /></article>
                 <article className="card"><img src="pictures/pexels-tina-p-891488179-34136780.jpg" alt="" /></article>
