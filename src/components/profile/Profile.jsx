@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router';
 export default function Profile() {
     const { userId } = useParams();
     return (
-        <div>
+        <div className='profile-container'>
             <img className='edit-user-icon' src="public\pictures\user-solid-full.svg" alt="icon" />
             <div className="user-statistics">
                 <p><Link to={`/profile/${userId}/myPosts`}>My Posts</Link></p>

@@ -1,15 +1,16 @@
-.profile-container {
+.edit-profile-container {
     margin-top: 100px;
     height: 100%;
     width: auto;
 }
-.profile-form {
+
+.edit-profile-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.profile-form input {
+.edit-username-input {
     width: 300px;
     height: 40px;
     margin: 10px 0;
@@ -19,23 +20,71 @@
     font-size: 16px;
 }
 
-.profile-form button {
-    width: 150px;
+.form-buttons-cancel-save {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+
+.save-button,
+.cancel-button {
+    width: 100px;
     height: 40px;
     margin-top: 20px;
-    background-color: #4CAF50;
-    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
-.profile-form button:hover {
-    background-color: #45a049;
-}
+
 .edit-user-icon {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+.save-button {
+    background-color: #eb323a;
+    color: white;
+
+}
+
+.save-button:hover {
+    background-color: #c42a30;
+}
+
+.cancel-button {
+    background-color: #f3eeee;
+    color: black;
+}
+
+.cancel-button:hover {
+    background-color: #d6cfcf;
+}
+
+.edit-icon-input {
+    margin-bottom: 20px;
+    border: none;
+    font-size: 16px;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.edit-icon-label {
+    background-color: #f3eeee;
+    color: black;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 10px;
+}
+.edit-icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
