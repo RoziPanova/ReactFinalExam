@@ -27,7 +27,9 @@
 }
 
 .save-button,
-.cancel-button {
+.cancel-button,
+.edit-button,
+.logout-button {
     width: 100px;
     height: 40px;
     margin-top: 20px;
@@ -35,6 +37,7 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .edit-user-icon {
