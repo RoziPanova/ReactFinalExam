@@ -1,7 +1,7 @@
 .main-container {
     padding: 100px 0 60px 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     margin-top: 20px;
@@ -31,7 +31,7 @@
 }
 
 .details-container img {
-    width: 700px;
+    width: 500px;
     height: auto;
     border-radius: 15px;
 }

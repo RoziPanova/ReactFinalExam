@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import Home from '../home/Home';
 
 export default function Details() {
 	return (
@@ -25,7 +26,6 @@ export default function Details() {
 					<input className='comment-field' type="text" name='comment' />
 				</div>
 			</div>
-
 		</div>
 	);
 }

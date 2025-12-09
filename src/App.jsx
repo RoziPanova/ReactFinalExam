@@ -6,6 +6,7 @@ import Details from './components/details/Details';
 import LikedPosts from './components/likedPosts/LikedPosts';
 import FollowersPosts from './components/followersPosts/FollowersPosts';
 import Profile from './components/profile/Profile';
+import EditProfile from './components/edit-profile/EditProfile';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path='/likedPosts' element={<LikedPosts />}/>
                 <Route path='/followersPosts' element={<FollowersPosts />}/>
                 <Route path='/profile/:userId' element={<Profile />}/>
+                <Route path='/profile/:userId/edit' element={<EditProfile />}/>
             </Routes>
             
             <Footer />
