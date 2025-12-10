@@ -1,6 +1,14 @@
-import { useParams, Link } from 'react-router';
+import { useParams, Link, useNavigate } from 'react-router';
+import { useUserContext } from '../../contexts/UserContext';
 export default function Profile() {
+    const { logout } = useUserContext();
     const { userId } = useParams();
+    const  navigate  = useNavigate();
+
+    const logoutHandeler = () => {
+        logout();
+        navigate("/");
+    }
     return (
         <div className='profile-container'>
             <img className='profile-user-icon' src="\pictures\user-solid-full.svg" alt="icon" />
@@ -12,10 +20,10 @@ export default function Profile() {
             </div>
             <div className='button-container-edit-logout'>
                 <button className="edit-button">
-                <Link to={`/profile/${userId}/edit`}>Edit Profile</Link></button>
-            <button className="logout-button">Log out</button>
+                    <Link to={`/profile/${userId}/edit`}>Edit Profile</Link></button>
+                <button className="logout-button" onClick={logoutHandeler}>Log out</button>
             </div>
-            
+
         </div>
     );
 }
