@@ -1,33 +1,20 @@
-import { Link } from 'react-router';
+import { useEffect, useState } from 'react';
+import CardPost from './card/CardPost';
 export default function Home() {
-    const postId = "samplePostId"; 
+    const [posts, setPosts] = useState(null);
+
+    useEffect(() => {
+        fetch('http://localhost:3030/data/posts')
+            .then(res => res.json())
+            .then(result => {
+                setPosts(result);
+            })
+    }, []);
     return (
         <div>
             <div className="masonry">
-                <article className="card">
-                    <Link to={`/details/${postId}`}><img src="pictures/pexels-mikhaelmayim-30253591.jpg" alt="" /></Link>
-                </article>
-                <article className="card"><img src="pictures/pexels-shojol-30890859.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-tina-p-891488179-34136780.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-laurachouette-21797582.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-elijah-pilchard-269100825-19594515.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-zehra-guven-432246826-33039121.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-matteo-sarri-2152532088-32495056.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-olha-maltseva-2156976676-34483144.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-davide-negro-2157018402-34505016.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-lexi-lauwers-1431940-33225985.jpg" alt="" /></article>
-                <article className="card">
-                    <img src="pictures/pexels-mikhaelmayim-30253591.jpg" alt="" />
-                </article>
-                <article className="card"><img src="pictures/pexels-shojol-30890859.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-tina-p-891488179-34136780.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-laurachouette-21797582.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-elijah-pilchard-269100825-19594515.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-zehra-guven-432246826-33039121.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-matteo-sarri-2152532088-32495056.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-olha-maltseva-2156976676-34483144.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-davide-negro-2157018402-34505016.jpg" alt="" /></article>
-                <article className="card"><img src="pictures/pexels-lexi-lauwers-1431940-33225985.jpg" alt="" /></article>
+                {posts && posts.map(post => <CardPost key={post._id} {...post} />)}
+                {posts && posts.map(post => <CardPost key={post._id} {...post} />)}
             </div>
         </div>
     );
