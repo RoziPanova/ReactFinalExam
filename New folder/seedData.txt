@@ -1,0 +1,135 @@
+
+    var seedData = {
+        posts: {
+            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+                _id: "3987279d-0ad4-4afb-8ca9-5b256ae3b298",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Lake",
+                description: "Beautiful lake in the mountains.",
+                img: "/pictures/pexels-davide-negro-2157018402-34505016.jpg",
+                _createdOn: 1613551279012
+            },
+            "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
+                _id: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Pine tree",
+                description: "Perfect pine tree",
+                img: "/pictures/pexels-elijah-pilchard-269100825-19594515.jpg",
+                _createdOn: 1613551344360
+            },
+            "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
+                _id: "985d9eab-ad2e-4622-a5c8-116261fb1fd2",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "White roses",
+                description: "Romantic white roses",
+                img: "/pictures/pexels-laurachouette-21797582.jpg",
+                _createdOn: 1613551388703
+            },
+            "ab82af23-c912-4db9-b0b2-112db80acf14": {
+                _id: "ab82af23-c912-4db9-b0b2-112db80acf14",
+                _ownerId: "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa",
+                title: "Suburban house",
+                description: "Quiet and peaceful suburban house.",
+                img: "/pictures/pexels-lexi-lauwers-1431940-33225985.jpg",
+                _createdOn: 1614601100000
+            },
+            "c7298a10-2ef7-4540-8ca1-12fbcb548b15": {
+                _id: "c7298a10-2ef7-4540-8ca1-12fbcb548b15",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Watterfall",
+                description: "Beautiful waterfall in the forest.",
+                img: "pictures/pexels-matteo-sarri-2152532088-32495056.jpg",
+                _createdOn: 1614602100000
+            },
+            "1987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+                _id: "1987279d-0ad4-4afb-8ca9-5b256ae3b298",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Cute cat",
+                description: "Cute cat picture in the snow",
+                img: "pictures/pexels-mikhaelmayim-30253591.jpg",
+                _createdOn: 1613551279012
+            },
+            "2f414b4f-ab39-4d36-bedb-2ad69da9c830": {
+                _id: "2f414b4f-ab39-4d36-bedb-2ad69da9c830",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Poppies",
+                description: "Perfect poppie bouquet",
+                img: "/pictures/pexels-olha-maltseva-2156976676-34483144.jpg",
+                _createdOn: 1613551344360
+            },
+            "385d9eab-ad2e-4622-a5c8-116261fb1fd2": {
+                _id: "385d9eab-ad2e-4622-a5c8-116261fb1fd2",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Snowy scene",
+                description: "Christmas snowy scene",
+                img: "/pictures/pexels-shojol-30890859.jpg",
+                _createdOn: 1613551388703
+            },
+            "4b82af23-c912-4db9-b0b2-112db80acf14": {
+                _id: "4b82af23-c912-4db9-b0b2-112db80acf14",
+                _ownerId: "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa",
+                title: "Scottish mountains",
+                description: "Quiet and peaceful mountains.",
+                img: "/pictures/pexels-tina-p-891488179-34136780.jpg",
+                _createdOn: 1614601100000
+            },
+            "57298a10-2ef7-4540-8ca1-12fbcb548b15": {
+                _id: "57298a10-2ef7-4540-8ca1-12fbcb548b15",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Road",
+                description: "Beautiful green path in the forest.",
+                img: "/pictures/pexels-zehra-guven-432246826-33039121.jpg",
+                _createdOn: 1614602100000
+            }
+        },
+        comments: {
+            "0a272c58-b7ea-4e09-a000-7ec988248f66": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                content: "Lovely green!",
+                postId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+                _createdOn: 1614260681375,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+            }
+        },
+        likes: {
+            "0a272c58-b7ea-4e09-a000-7ec988248f63": {
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248f63",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                postId: "985d9eab-ad2e-4622-a5c8-116261fb1fd2",
+                _createdOn: 1614605550000
+            },
+            "5a272c58-b7ea-4e09-a000-7ec988248f66": {
+                _id: "5a272c58-b7ea-4e09-a000-7ec988248f66",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                postId: "ab82af23-c912-4db9-b0b2-112db80acf14",
+                _createdOn: 1614605600000
+            }
+        },
+        followers: {
+            "35c62d76-8152-4626-8712-eeb96381bea8": [
+                "847ec027-f659-4086-8032-5173e2f9c93a",
+                "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa"
+            ],
+            "847ec027-f659-4086-8032-5173e2f9c93a": [
+                "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa"
+            ],
+            "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa": []
+        },
+        users: {
+            "35c62d76-8152-4626-8712-eeb96381bea8": {
+                _id: "35c62d76-8152-4626-8712-eeb96381bea8",
+                email: "john@example.com",
+                username: "John",
+            },
+            "847ec027-f659-4086-8032-5173e2f9c93a": {
+                _id: "847ec027-f659-4086-8032-5173e2f9c93a",
+                email: "anna@example.com",
+                username: "Anna",
+            },
+            "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa": {
+                _id: "99cd8f11-1f8d-4a7c-9311-21ad2305c2aa",
+                email: "mark@example.com",
+                username: "Mark",
+            }
+        },
+    };
