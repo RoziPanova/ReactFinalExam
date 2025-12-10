@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { useUserContext } from '../../contexts/UserContext';
 
 export default function Header() {
-    const { isAuthenticated, user, logout } = useUserContext();
+    const { isAuthenticated, user } = useUserContext();
     const userId = user?._id;
     return (
         <div className="navbar-container">

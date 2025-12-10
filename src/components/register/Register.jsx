@@ -12,6 +12,8 @@ export default function Register() {
     const { login } = useUserContext();
     const navigate = useNavigate();
 
+    const { icon } = '/pictures/user-solid-full.svg';
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(null);
@@ -33,7 +35,7 @@ export default function Register() {
             const res = await fetch("http://localhost:3030/users/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({ email, password, username, icon }),
             });
 
             if (!res.ok) {
@@ -42,6 +44,7 @@ export default function Register() {
             }
 
             const data = await res.json();
+            console.log(data);
             login({
                 _id: data._id,
                 username: data.username,

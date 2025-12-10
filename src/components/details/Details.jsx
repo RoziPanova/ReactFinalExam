@@ -122,8 +122,8 @@ export default function Details() {
 					<p>{post.description}</p>
 				</div>
 				<div className='post-info-poster'>
-					<p>Icon {post.creator.username}</p>
-					{isAuthenticated && {/* <button onClick={likeHandeler(post._id)}>{hasLiked ? 'Unlike' : 'Like'} <p>{likes}</p></button> */ }}
+					<p>Icon {post.creator?.username || "Unknown"}</p>
+					{/* {isAuthenticated && {/* <button onClick={likeHandeler(post._id)}>{hasLiked ? 'Unlike' : 'Like'} <p>{likes}</p></button> */ }
 				</div>
 				{isAuthenticated &&
 					<div className='comments-container'>

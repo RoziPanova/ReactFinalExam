@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
+import { useUserContext } from '../../contexts/UserContext';
 
 const initialValues = {
   icon: '',
@@ -25,6 +26,24 @@ export default function EditProfile() {
   const [errors, setErrors] = useState({});
   const [dirty, setDirty] = useState(false);
 
+  const { user } = useUserContext();
+
+
+
+  useEffect(() => {
+    if (user) {
+      setData({
+        username: user.username || "",
+        profileImage: user.profileImage || "",
+      });
+    }
+  }, [user]);
+
+  if (!user) {
+    return <p>Loading...</p>;
+  }
+
+
   const changeHandler = (e) => {
     setData((state) => ({
       ...state,
@@ -33,7 +52,7 @@ export default function EditProfile() {
     console.log(data);
   };
 
-  const submitAction = (e) => {
+  const submitAction = async (e) => {
     e.preventDefault();
     const errors = validate(data);
     setErrors(errors);
@@ -43,8 +62,23 @@ export default function EditProfile() {
 
         return;
       }
-      console.log('Submitted data:', data);
-      setData(initialValues);
+      const res = await fetch(`http://localhost:3030/users/${userId}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+      let result = null;
+      if (res.status !== 204) {
+        result = await res.json();
+      }
+
+      if (!res.ok) {
+        throw new Error(result.message);
+      }
+      return result;
+
     }
     catch (err) { alert(err.message) }
 
@@ -67,7 +101,7 @@ export default function EditProfile() {
     <div className="edit-profile-container">
       <form onSubmit={submitAction} className="edit-profile-form">
         <p>Edit Profile</p>
-        <div className='edit-icon-container'> 
+        <div className='edit-icon-container'>
           <img className='edit-user-icon' src="\pictures\user-solid-full.svg" alt="icon" />
           <label htmlFor="icon" className='edit-icon-label'>Change icon</label>
           <input

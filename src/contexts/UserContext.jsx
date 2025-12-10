@@ -1,12 +1,12 @@
-import { createContext,  useContext, useEffect, useState } from "react";
-import { useNavigate } from 'react-router';
+import { createContext, useContext, useEffect, useState } from "react";
+
 
 const UserContext = createContext();
 
 export function UserProvider({ children }) {
   const [user, setUser] = useState(null);        // user object
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const { navigate } = useNavigate();
+
 
   useEffect(() => {
     // On page load, check sessionStorage for logged-in user
@@ -15,7 +15,7 @@ export function UserProvider({ children }) {
     const username = sessionStorage.getItem("username");
 
     if (token && userId) {
-      setUser({ _id: userId, username });
+      setUser({ _id: userId, username, token });
       setIsAuthenticated(true);
     }
   }, []);
